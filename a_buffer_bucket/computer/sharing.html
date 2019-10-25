@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>sharing</title>
+	<meta name="generator" content="Zim 0.68">
+	<meta name="viewport" content="width=device-width">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+	<![if !IE]>
+	<!-- comment out for IE since it spams the user with warnings -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript'>
+		$(window).load(function(){$("#navigation").height( $("#content").height()+65 );});
+	</script>
+	<![endif]>
+	<style>
+		*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+		body, html {
+			height:100%;
+			font-family:'Open Sans', sans-serif;
+			line-height:1.5em;
+			font-weight:300;
+			background-color:#FAFAFA;
+			text-rendering:geometricPrecision;
+			margin:0;
+			padding:0;
+		}
+		.wrapper {
+			height:100%;
+			padding: 1.25em;
+			margin: .5em;
+		}
+		#navigation {
+			background-color: #F3F3F3;
+			border-right:1px solid #EAEAEA;
+			padding: 1.25em;
+		}
+		
+
+		#content {
+			padding: 1.25em;
+			margin-bottom: .5em;
+			
+		}
+		#navigation ul {
+			margin-top:0;
+			margin-bottom:0;
+			padding-left:40px;
+		}
+		#navigation li {
+			list-style-type:none;
+		}
+		#navigation a {
+			text-decoration:none;
+			color:gray;
+		}
+		#navigation strong {
+			color: #6E1308;
+			font-weight:400;
+		}
+		#navigation a:hover {
+			text-decoration:underline;
+		}
+		#content h1:nth-child(1) {
+			margin-top:0;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			color: #6E6408;
+			font-weight:300;
+		}
+		
+			
+		#content a {
+			color :#6E1308;
+		}
+		#content a {
+			text-decoration: none;
+		}
+		#content a:hover {
+			text-decoration: underline;
+		}
+		#content a:active {
+			text-decoration: underline;
+		}
+		#content strike {
+			color: grey;
+		}
+		#content u {
+			text-decoration: none;
+			background-color: yellow;
+		}
+		#content tt {
+			color: #6E1308;
+		}
+		#content pre {
+			color: #6E1308;
+			margin-left: 20px;
+		}
+		.backlinks {
+			color:gray;
+		}
+		hr.footnotes {
+			width: 20%;
+			margin-left: 0;
+		}
+
+	@media (min-width: 47.5em ) and (orientation: landscape) {
+	#content { margin-right: 19.5em; }
+
+	#navigation { position: absolute; top: 0; right: 0; width: 18.75em;}   
+	}
+		
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="navigation"> <ul>
+<li><a href="../../a_buffer_bucket.html" title="a buffer bucket" class="page">a buffer bucket</a>
+<ul>
+<li><a href="../art.html" title="art" class="page">art</a></li>
+<li><a href="../business.html" title="business" class="page">business</a></li>
+<li><a href="../computer.html" title="computer" class="page">computer</a>
+<ul>
+<li><a href="./hackwifi.html" title="hackwifi" class="page">hackwifi</a></li>
+<li><a href="./plan.html" title="plan" class="page">plan</a></li>
+<li><a href="./programming.html" title="programming" class="page">programming</a></li>
+<li><a href="./scripts.html" title="scripts" class="page">scripts</a></li>
+<li><b>sharing</b></li>
+</ul>
+</li>
+<li><a href="../cooking.html" title="cooking" class="page">cooking</a></li>
+<li><a href="../kuliah.html" title="kuliah" class="page">kuliah</a></li>
+<li><a href="../small_shelf.html" title="small shelf" class="page">small shelf</a></li>
+<li><a href="../travel.html" title="travel" class="page">travel</a></li>
+</ul>
+</li>
+<li><a href="../../summaries.html" title="summaries" class="page">summaries</a></li>
+<li><a href="../../writings.html" title="writings" class="page">writings</a></li>
+</ul>
+ </div>
+		<div id="content">
+			<h1>sharing <a name='a buffer bucket:computer:sharing'></a></h1>
+
+			<p>
+Created Wednesday 01 November 2017
+</p>
+
+<p>
+If it's Windows, assuming you're all on the same network (wifi or wired), it's honestly pretty easy.
+</p>
+
+<p>
+On each computer you want to share files from:
+</p>
+
+<p>
+<div style='padding-left: 30pt'>
+Start -&gt; Run -&gt; "cmd"<br>
+"ipconfig" -&gt; Write down the part labelled "IP address", will look like 192.168.1.5 or so.<br>
+"hostname" -&gt; write down the response to that.<br>
+Right click a folder or drive you want to share, click Properties, click the Sharing tab, click "Advanced Sharing", check the box labelled "Share this folder", give it a name. Save yourself effort and don't use spaces in that name. Default permissions are fine.
+</div>
+</p>
+
+<p>
+On each machine you want to access shared files:
+</p>
+
+<p>
+<div style='padding-left: 30pt'>
+Right click "My Computer" or "Computer" and choose "Map Network Drive"<br>
+Pick a drive letter (doesn't matter which, it won't let you choose one that's already in use). In folder, put "\ip.of.sharing.computer\ShareFolderName" - so, "\192.168.1.5\VacationPictures". Put a check in the boxes labelled "Connect using different credentials" and "Reconnect at logon."<br>
+When it asks you for username and password, put in "hostname\username" and the password. So if you're getting files off of MomsPC and her username is Jenny, it'd be "MomsPC\Jenny", and whatever her password is.
+</div>
+</p>
+
+<p>
+There ya go. Now every time you power up, assuming the other computer is powered on, if you go to Computer, you will see an icon called "VacationPictures on MomsPC" that you can double-click and access just like you could anything local to your machine.
+</p>
+
+<p>
+Let it be said that Windows 7 Home and up have something called a HomeGroup that's supposed to make all that a little less Greek to people, but I've never used it so I have no idea how to do so. You might Google "How do I set up a Windows homegroup" and see if there's a tutorial.
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			
+		</div>
+	</div>
+</body>
+</html>
+
