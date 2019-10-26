@@ -127,19 +127,18 @@
 <li><b>computer</b>
 <ul>
 <li><a href="./computer/hackwifi.html" title="hackwifi" class="page">hackwifi</a></li>
-<li><a href="./computer/plan.html" title="plan" class="page">plan</a></li>
 <li><a href="./computer/programming.html" title="programming" class="page">programming</a></li>
 <li><a href="./computer/scripts.html" title="scripts" class="page">scripts</a></li>
 <li><a href="./computer/sharing.html" title="sharing" class="page">sharing</a></li>
 </ul>
 </li>
 <li><a href="./cooking.html" title="cooking" class="page">cooking</a></li>
-<li><a href="./kuliah.html" title="kuliah" class="page">kuliah</a></li>
 <li><a href="./small_shelf.html" title="small shelf" class="page">small shelf</a></li>
 <li><a href="./travel.html" title="travel" class="page">travel</a></li>
 </ul>
 </li>
 <li><a href="../index.html" title="index" class="page">index</a></li>
+<li><a href="../initiatives,_todo,_tracker.html" title="initiatives, todo, tracker" class="page">initiatives, todo, tracker</a></li>
 <li><a href="../summaries.html" title="summaries" class="page">summaries</a></li>
 <li><a href="../writings.html" title="writings" class="page">writings</a></li>
 </ul>
@@ -151,87 +150,60 @@
 Created Wednesday 11 October 2017
 </p>
 
-<p>
-Get-AppxPackage -User &lt;your user&gt; | Remove-AppxPackage       
-</p>
-
-<p>
-disable diagtrack
-</p>
-
-<p>
-I had the same problem and the advice on this page didn't help that much. troubleshooter was obviously incapable of finding a "problem" after literally hours of high cpu usage on my laptop.Try this:go to control panel... choose to view as small icons... then select indexing optionsor search for indexing optionsopen itadvancedchoose rebuild from the troubleshooting section (DOH)it would seem that an error in the index is causing this high cpu usage. I'm no expert but this solved the problem for me. windows search momentarily doesn't work... but the index is rebuilding so it will be ok.it has nothing to do with indexing locations... I added the entire drive in the index and cpu usage dropped immediately after choosing to rebuild to 5%-10%.there is a way of uninstalling windows search from programs in control panel. it's just a windows "feature". but I would advise against this as I have already tried that... and the windows 8.1 menu seems a little sluggish after this (also the OS in general).
-</p>
-
-<p>
-<ul>
-<li>Use the Windows key + R keyboard shortcut to open the Run command, type regedit, and click OK to open the registry.</li>
-<li>Browse the following path:</li>
-</ul>
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
-</p>
-
-<p>
-<ul>
-<li>If you don't see DWORD DisableAntiSpyware, right-click on an empty space, select New, and click on DWORD (32-bit) Value.</li>
-<li>Name the key DisableAntiSpyware.</li>
-<li>Double-click the newly created key, and set the value from 0 to 1.</li>
-</ul>
-</p>
-
-<p>
-win7<br>
-start /w wusa.exe /uninstall /kb:2976978 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3075249 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3080149 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3021917 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3022345 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3068708 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3035583 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:2990214 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:2952664 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3065987 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3050265 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:971033 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:2902907 /quiet /norestart
-</p>
-
-<p>
-win8.1<br>
-start /w wusa.exe /uninstall /kb:3044374 /quiet /norestart<br>
-start /w wusa.exe /uninstall /kb:3075853 /quiet /norestart
-</p>
-
-<p>
-sc delete DiagTrack<br>
-sc delete dmwappushservice<br>
-echo "" &gt; C:\ProgramData\Microsoft\Diagnosis\ETLLogs\AutoLogger\AutoLogger-Diagtrack-Listener.etl<br>
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
-</p>
+<h2>Download Open Directories Script</h2>
 
 <p>
 wget -r -e robots=off -np -nc --accept mobi,cbz,cbr,cbc,chm,epub,fb2,lit,lrf,odt,pdf,prc,pdb,pml,rb,rtf,tcr,txt,zip,rar,tar,sit --reject htm,html
 </p>
 
+<h2>Windows</h2>
+
+<br>
+
+<h3>Installation</h3>
+
 <p>
 choco install 7zip anki calibre ccleaner clementine cygwin dropbox emet f.lux freeplane gimp git.install hugin googlechrome inkscape jre8 libreoffice malwarebytes nodejs.install pdfsam powershell r.project scribus smplayer sublimetext3 sumatrapdf.install zim chocolatey emacs sysinternals youtube-dl -y<br>
-foobar2000 sublimetext3.packagecontrol wget tor-browser <br>
-utorrent daemon easeus gmic ice idm line office minitab smadav spss synaptic<br>
 npm install -g bower<br>
 bower install jquery picnic
 </p>
+
+<h3>Other Packages</h3>
+
+<p>
+foobar2000 sublimetext3.packagecontrol wget tor-browser <br>
+utorrent daemon easeus gmic ice idm line office minitab smadav spss synaptic
+</p>
+
+<h2>Linux</h2>
+
+<br>
+
+<h3>Installation</h3>
 
 <p>
 sudo apt-get remove abiword* apport* apt-xapian-index* gigolo* gmusicbrowser* gnome-mines* gnome-sudoku* gnomine* gnumeric* mousepad* parole* pidgin* ristretto* software-center* thunderbird* xchat* xfburn* xfce4-screenshooter* yelp*<br>
 sudo apt-get install feh git gparted i3 idle3 libav-tools p7zip-full python-gpgme python-pip python3-pip python-tk python3-tk redshift-gtk shutter synaptic ttf-mscorefonts-installer xubuntu-restricted-extras calibre cmus geeqie gimp-gmic hugin keepassx lyx mupdf mupdf-tools playonlinux scribus smplayer ufraw wings3d xchm zim texlive-full libreoffice<br>
 sudo apt-get install jack ardour audacity qtractor hydrogen yoshimi rakarrack guitarix gladish qjackctl puredata supercollider csound chuck blender mypaint openshot darktable<br>
 sudo wget <a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a> -O /usr/local/bin/youtube-dl<br>
-sudo chmod a+rx /usr/local/bin/youtube-dl<br>
-dropbox, chrome, android studio, subl, steam<br>
-sudo apt-get install lib32stdc++6<br>
+sudo chmod a+rx <a href="file:///usr/local/bin/youtube-dl" title="/usr/local/bin/youtube-dl" class="file">/usr/local/bin/youtube-dl</a><br>
+sudo apt-get install lib32stdc++6
+</p>
+
+<h3>Other Packages</h3>
+
+<p>
+dropbox, chrome, android studio, subl, steam
+</p>
+
+<h3>Maintenance</h3>
+
+<p>
 sudo apt-get update &amp;&amp; sudo apt-get -y upgrade &amp;&amp; sudo apt-get -y dist-upgrade<br>
 sudo apt-get autoremove &amp;&amp; sudo apt-get -y autoclean &amp;&amp; sudo apt-get -y clean 
 </p>
+
+<h3>Performance</h3>
 
 <p>
 sudo nano /etc/sysctl.conf<br>
@@ -241,45 +213,19 @@ sudo nano /etc/rc.local<br>
 fstrim /
 </p>
 
-<p>
-exec --no-startup-id redshift-gtk -l -7.7956:110.3695<br>
-xrandr --output VGA-1 --brightness 0.5
-</p>
+<h3>Display Troubleshoot</h3>
 
 <p>
+exec --no-startup-id redshift-gtk -l -7.7956:110.3695<br>
+xrandr --output VGA-1 --brightness 0.5<br>
 xrandr --newmode "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync &amp;&amp; xrandr --addmode VGA-1 1440x900_60.00 &amp;&amp; xrandr --output VGA-1 --mode 1440x900_60.00
 </p>
 
-<p>
-Reputable Sites
-</p>
+<h3>Setting Environment Variables</h3>
 
 <p>
-151.101.129.140 reddit.com<br>
-151.101.129.140 www.reddit.com<br>
-151.101.129.140 np.reddit.com<br>
-151.101.129.140 bt.reddit.com<br>
-151.101.129.140 m.reddit.com<br>
-107.23.11.190 out.reddit.com<br>
-151.101.129.140 oauth.reddit.com<br>
-151.101.45.140 ssl.reddit.com<br>
-bonus for related website
+export PATH=${PATH}:path/to/file
 </p>
-
-<p>
-151.101.24.193 imgur.com<br>
-151.101.24.193 www.imgur.com<br>
-151.101.24.193 i.imgur.com<br>
-104.156.81.217 vimeo.com<br>
-104.156.81.217 player.vimeo.com<br>
-minta cendolnya gan /s
-</p>
-
-<p>
-randomlyy generated number<br>
-vendor evaluation and market intelligence departement. has the authority to qualify vendor as per vendor qualification progress.
-</p>
-
 
 
 			<br>
