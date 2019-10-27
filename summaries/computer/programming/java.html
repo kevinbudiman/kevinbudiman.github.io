@@ -122,7 +122,7 @@
 		<div id="navigation"> <ul>
 <li><a href="../../../a_buffer_bucket.html" title="a buffer bucket" class="page">a buffer bucket</a></li>
 <li><a href="../../../index.html" title="index" class="page">index</a></li>
-<li><a href="../../../initiatives,_todo,_tracker.html" title="initiatives, todo, tracker" class="page">initiatives, todo, tracker</a></li>
+<li><a href="../../../initiatives,_todo.html" title="initiatives, todo" class="page">initiatives, todo</a></li>
 <li><a href="../../../summaries.html" title="summaries" class="page">summaries</a>
 <ul>
 <li><a href="../../business.html" title="business" class="page">business</a></li>
@@ -217,7 +217,7 @@ blalala<br>
 <h3>access modifiers</h3>
 
 <p>
-//in top-level there are only public, default, and none. <br>
+//in top-level there are only public and none. <br>
 package com.apress.bgn.ch0;<br>
 public class Base {<br>
 <div style='padding-left: 30pt'>
@@ -244,7 +244,47 @@ Base base = new Base();
 }
 </p>
 
-<br>
+<p>
+//while in member level, there are public, protected, none, and private
+</p>
+<table>
+<thead><tr>
+  <th align="left">Column 1</th>
+  <th align="left">class</th>
+  <th align="left">package</th>
+  <th align="left">subclass</th>
+  <th align="left">everywhere</th>
+</tr></thead>
+<tr>
+  <td align="left">public</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+</tr>
+<tr>
+  <td align="left">protected</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+  <td align="left">N</td>
+</tr>
+<tr>
+  <td align="left">none/default/package-private</td>
+  <td align="left">Y</td>
+  <td align="left">Y</td>
+  <td align="left">N</td>
+  <td align="left">N</td>
+</tr>
+<tr>
+  <td align="left">private</td>
+  <td align="left">Y</td>
+  <td align="left">N</td>
+  <td align="left">N</td>
+  <td align="left">N</td>
+</tr>
+</table>
+
 <br>
 
 
