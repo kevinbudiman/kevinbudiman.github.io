@@ -1,0 +1,1337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Website</title>
+	<meta name="generator" content="Zim 0.75.2">
+	<meta name="viewport" content="width=device-width">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+	<![if !IE]>
+	<!-- comment out for IE since it spams the user with warnings -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
+	<script type='text/javascript'>
+		$(window).load(function(){$("#navigation").height( $("#content").height()+65 );});
+	</script>
+	<![endif]>
+	<style>
+		body, html {
+			height:100%;
+			font-family:'Open Sans', sans-serif;
+			line-height:1.5em;
+			font-weight:300;
+			background-color:#FAFAFA;
+			text-rendering:geometricPrecision;
+			margin:0;
+			padding:0;
+		}
+		.wrapper {
+			height:100%;
+			position:relative;
+		}
+		#navigation {
+			background-color:#F3F3F3;
+			display:inline-block;
+			border-right:1px solid #EAEAEA;
+			padding-right:65px;
+			padding-top:65px;
+			padding-left:25px;
+			position:relative;
+			float:left;
+			min-height:100%;
+		}
+		#content {
+			float:left;
+			display:inline-block;
+			position:absolute;
+			max-width:960px;
+			padding:65px;
+		}
+		#navigation ul {
+			margin-top:0;
+			margin-bottom:0;
+			padding-left:40px;
+		}
+		#navigation li {
+			list-style-type:none;
+		}
+		#navigation a {
+			text-decoration:none;
+			color:gray;
+		}
+		#navigation strong {
+			color:#4E9A06;
+			font-weight:400;
+		}
+		#navigation a:hover {
+			text-decoration:underline;
+		}
+		#content h1:nth-child(1) {
+			margin-top:0;
+			margin-bottom:0;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			color:#4E9A06;
+			font-weight:300;
+			margin-top:0;
+			margin-bottom:0;
+		}
+		p {
+			margin-top:0;
+			margin-bottom:0;
+		}
+		#content a {
+			color:#CE5C00;
+		}
+		#content a {
+			text-decoration: none;
+		}
+		#content a:hover {
+			text-decoration: underline;
+		}
+		#content a:active {
+			text-decoration: underline;
+		}
+		#content strike {
+			color: grey;
+		}
+		#content u {
+			text-decoration: none;
+			background-color: yellow;
+		}
+		#content tt {
+			color: #2e3436;
+		}
+		#content pre {
+			color: #2e3436;
+			margin-left: 20px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.backlinks {
+			color:gray;
+		}
+		hr.footnotes {
+			width: 20%;
+			margin-left: 0;
+		}
+		@media print{
+			#navigation{
+				background-color:#FFF;
+			}
+		}
+
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+
+		.checked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8sMEGsKGkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEBUlEQVRIx62V22tdRRTGf7Nn73P2ybntnNOe3NqkPTGgLTVUUZF6QatSLOKTPgqCIqLgQ0H/A1sQQbBYCBb1QfAxiC8tSO1FqHkwJVKtjdTGNraUmObsc9nXmfGh7cGYpM1D5nHWzPetteZb3wg2eB2YqYm4zSadsMtoboiNBH/3TE0awx6j+MRoxoTg/IYRvP19TQrJS0bzhdHGSyKFkLTtjSKwMjyiEz43ynhtP6bdjBCWyFobAf7eT7VhNF/q1FRbjYjmUohlCVPwnB+6FUxMTJipqSmUUhhjEGKd3bMT4ks/Y6oLBK2Yth8hHYtCJXOix7Nf7xLMzc0xOzvLzp078TyPNE3viW3QJPXzhNWbxFFKHCmMhoLn/FHodd48vGfhapdAacXQlkFK5dL6wIUm6fuTZPuvqDQhaMUYYyiVyuQr6rXDexYuAdi3tSv1ZJNs/R/CaszzT+1na88uXFnCEnJVgivBNN8uTJKmHQI/ptOOcXNZzMz9mOqFs90OHpipWcYwlo5P4ebnuOkrvr5wgrH+h3im7y36MzuwRXYZeKha/OhP0EkadFoxQSdGSotedR/+XwMc2XvKdNUFOFqZx6LKZWIiwjgkikNmLp/hm8sH+K1zjFTHXfBYdTi+eJArzXM0GxFxoBDCopLvo/fqEwi1XPkWkGqjFo2TgB1jOYZUKZTS/D1/ncmLh7jon0IbRWoiTi59ymzzJEEQE3cStNZsGxqlfPE57MBbOR8fP3hDGalOO9fq2DlBvmZw8xa2IxACGn6TydlD/O6f5OzSV/zif0cYhLQaEXGkKBbz7Ov/AOlXV1cxgBJRI3fuSTrpTawt18kWIZN1CFuaONI0w0WOXfsI43YIggh/KUSlhqxrMz74AkOZcWBm9QkH+Gw8NDLuITi+m0yzhluSyJzBLcpblUhFxywSRAEtPwQjsKVN30CNh0uvYuOubSHLtN3J0TO1j0pmBNuFbFWRK0gyPRZpktL2I5JQkclKakNlnh54g6ocvevUr/Ai2a7wineEkcJupA3S1Wg0nVZM2E6wbEF5U5G9Q++wI7sfR7h3N8HVNstykBfzH+KJEZwiWD0aIwxCgJ0R1Mu7GXOeJSuK93bZtQIle4D9pUNU5DC5jEsu55AvZakM5NicGyEj8uuz8bUCQgj67QfY671P3vEoeC69gy695U1U7NG7XV0pUwBjDJa1/JJlWWxzHuflzQe5FJ/GsgUVuZ2t8lEkTvfc0aNHb72flBhjVicQQqCUuvM3/M+WDVguWBrMVdDXEGZlBVEUrVCU9d9s5+fnaTQa2PZyPxEIhJaI1EEoZwX4ncynp6fXrmB4eJjR0VFarRbNZnP9P9rt9gohqNVq1Ov1ZbF/AZGev3hLJ2/zAAAAAElFTkSuQmCC)}
+		.xchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8bDYnDxEwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAEK0lEQVRIx9WVS2hTWRjHf/eR3CY1nbxMH2YiZRQS6qO13YlMVxY3SnVcuNIBFezGpSADLoQqLu1sHJCqdCFSXFpw4YOCSH3BtFqttTNamabX3DS5bfO6uffMoglja3RGcDMHzuac7/z/53++//cd+L8P6VuCPQYZ8ADNgBd4J31DcDcQs+GnHByRocEDv0kfBSjAOlYCs11Q+gpwDegS8LMJ+3QIK0ATzEhV8Odnz5bzw8P4dJ25aJQ/WlvJ1df/K7hSLtOcTNI+Pk69rpMTgqIQhCDvh1/VSpw79+gRrRMTmLZNezLJJsPg+a5dmOEwQlFqg1sWG16/Jv7sGWXDwBACFQjC9HcwIMONKkGp4PGAJGEDS0IQmZlhnWnye3c3eiyGo6qr3WHbrJ+dJf7gAXI6zSIr72T7/fgzmT4FHnTBsgrQBfYvTU0km5vxz86iADnAm0rRPTWFt7cXZccOJJcLAGHb2K9ekT93jmwmwwdAAFpjI6Ntbfxw5879ag7l6o1sr5eHHR3IsRgeQK/M4sQE+YEB7JcvEY6zAj45SWFgAPPxYwzHoQxIkQjTPT0kIxE+Noj8sexFn4/xnh58iQTeSpHkHAdrbIzi0BCOrmNPTpK/eJHM3bt8sCyKQCiR4NWePWSiUZw1+ZLXJm4pFKLhzBlCsRh2RUXacVgeGaF47RrL58+zcP8+RrmMkCQinZ1EL1zAjERqmkH+tLYl1G3bCJw4QUjT0IA0MJfLMX/5MqmHD0nZNiUgtGULG/r7ccXjINWuWbnmqsuFu7sb/4EDNLlcBIEioNs2KUAFGmMxmk6dQm1tRZI+3xBqEkiShBQOox05Ql1nJ26gvuIUAWiKQnj/ftStW5Fk+YuF+NldsbBA4cYN9KdPmaso8Fc62ZJtk7l1C2t0FGdxESHE1xE4hkHh6lX0oSHSpRIewC/LrPf7CSgKNpCamkI/fZr8pUuIZBIcpyaBunahPp1mub+fDyMjGKUSChCsq6Nh717q9u2jbnSU0uAgRrFIwTThyhUCqRS+hgZKLS1fJvDm87SNjZGcnsYUAjcQ8vsJ9/Xh7u1FDgRQN20iks3iDA+zZFmYhQLqzZtsj8WY3L0baY2Sf55ICCKpFHUzM2SEQAJCHg+hY8fQDh5EDgRWDoRC1J88SePRo2geD0XAcBy8b98Sv3ePYDZbbf2rFQjLIphMsmDbaEBQVQkePox26BCSz7e6i4bDrDt+nGYhmBscpFAskheC4Js3bPR4qHphFYEnlcI7P4/jdqNpGu8TCe4oCsXr1z//F2ga3+/cSfTJE0qmSVYIsKzaOZDcbjKyzFIiwfvt21kMBLA07YsetzWNd+3tLLW0sH5igvT8PH9Go/z44kX+E4LGjg7GDYOcy4XlOEgLC//5P/5LCFzxOPLmzWyIx+m6fduu7v0NVGqyTSycKksAAAAASUVORK5CYII=)}
+		.unchecked-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB9gKGQ8qAt8h3m8AAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAA60lEQVRIx+2VsQqDMBRF70sCLg5OLoKgjk7+lJ/hh+STXBwcnRz8ArMEkrxOFktbaC3tULzTg5e8k5vADXDq70VbobXmvu/hvQczg4heHrJfXxQFuq67blZbMc8zpmlCXddIkgTOuZcBUko45zCOI6y1Nz2xFSEEZFmGOI7fGg4A3nsQEZqmuXOu9jallACAtm3fvmutNaIoAjM/dkBECCF89KCbk4eAb+kEnIAT8EsAM0OIz3hSyrssUvss8t5fg+uIrLXPs0gIgWVZYIyBUurQyYdheO4gz3NUVQVjDNZ1PfSjpWmKsixvehfB9GBZ3NndrgAAAABJRU5ErkJggg==)}
+		.migrated-box {list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAANOgAADMQBiN+4gQAAAAd0SU1FB+AKHREFA8vJSnkAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAC1klEQVRIx+2VT0hUURTGf/e958w4Tc3TYowMw1GyEgwr1MqsFmbZIrIWQZsWJUjbdoHQpl3Qps0swnCRECQFYkR/TC1iKkqmfzAKTo2Vf8hoRsfR995tkRMT87RRWkUHHhy495zvnvvu933wP/75EKkkEAjIYDCIaZpIKRFCZN0kfX9xcTGtra2/irVUEolECIfDlJeXo+s6hmFkDaCqKoZhEAqFSCaTv60pqcSyLAoLC/F4PEtqDmCaJkIIKisrMybX0sdUVRWA5ubmPzdNjjI1cpXkZC/O1fV03PXgdDqRUtpPIITAsqxsDz0Z/3CZQv8uqo4N4C8/Tp2/DdM0MiZQlvk41OTkI/LW1SGtCVb5drD3eCc71wcA+VcAHA5vDd8+3UGakxiJV7i9pdQevU5T1R35pJ3MV5QW1pf+0kWBheJ2SWua8EQXZXsu4fVVYEz1sEKvof5EuxjoPvzpcRvrdp9C2gGMx6cpOHBmbImMesds7BZubwMVDTfXDnQ3vQfK7AC8wLfExMX5whyQc3q2OEnjGm5vE76SQxsfBLr77a7CNf+n0r/l6sSMtsBSnurckiIILCobAtVZhpF4gZF4jubaymj4Ch/fd380LE7bAnjc0NPxk2yqpmEuwGxF0ag+0k5uTpzZeBeaazvj0We8fXojainsb2xh2BZgbe0gSIllzSIUh63wfQ6dZ/O2fbjcKlOj58jJ3cVENESw5yErc9nf2MLQ4jwQAkV1Lqiq37/cZ9WaahJjF9AcmxiPDhLs7ePe23oOnmUwg2hSShQle96tKDjA2HAniusgo9FxnvY9Jxw7RWzGYy92QghM00x5g53qp9sHmtB58/o2umOI2NwGolMnMYUHIb7aAyiKwsjICLqu2/qBEIKUUAohMaSHSLyBSMoPTINQ6CX5+fn2AEVFRZSUlBCPx4nFYhl3L4RESjF/GEgX3pSj+Xw+/H7/b3U/AEOZFnp7O5+5AAAAAElFTkSuQmCC)}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="navigation"> <ul>
+<li><a href="#Website" title="Website" class="page">Website</a>
+<ul>
+<li><a href="#Website:Around the Web" title="Around the Web" class="page">Around the Web</a></li>
+<li><a href="#Website:References" title="References" class="page">References</a>
+<ul>
+<li><a href="#Website:References:Art" title="Art" class="page">Art</a>
+<ul>
+<li><a href="#Website:References:Art:Books" title="Books" class="page">Books</a>
+<ul>
+<li><a href="#Website:References:Art:Books:Eng" title="Eng" class="page">Eng</a></li>
+<li><a href="#Website:References:Art:Books:Indo" title="Indo" class="page">Indo</a></li>
+</ul></li>
+<li><a href="#Website:References:Art:Cooking" title="Cooking" class="page">Cooking</a>
+<ul>
+<li><a href="#Website:References:Art:Cooking:Choc Chip Cookies" title="Choc Chip Cookies" class="page">Choc Chip Cookies</a></li>
+</ul></li>
+<li><a href="#Website:References:Art:Manga" title="Manga" class="page">Manga</a></li>
+<li><a href="#Website:References:Art:Movies" title="Movies" class="page">Movies</a></li>
+<li><a href="#Website:References:Art:Travel" title="Travel" class="page">Travel</a>
+<ul>
+<li><a href="#Website:References:Art:Travel:Jakarta" title="Jakarta" class="page">Jakarta</a></li>
+<li><a href="#Website:References:Art:Travel:Semarang" title="Semarang" class="page">Semarang</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#Website:References:IT" title="IT" class="page">IT</a>
+<ul>
+<li><a href="#Website:References:IT:General" title="General" class="page">General</a></li>
+</ul></li>
+<li><a href="#Website:References:Social" title="Social" class="page">Social</a></li>
+<li><a href="#Website:References:Work" title="Work" class="page">Work</a>
+<ul>
+<li><a href="#Website:References:Work:Audit" title="Audit" class="page">Audit</a>
+<ul>
+<li><a href="#Website:References:Work:Audit:Intro" title="Intro" class="page">Intro</a></li>
+<li><a href="#Website:References:Work:Audit:PSP" title="PSP" class="page">PSP</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#Website:Travel" title="Travel" class="page">Travel</a>
+<ul>
+<li><a href="#Website:Travel:Jogja" title="Jogja" class="page">Jogja</a></li>
+</ul></li>
+</ul></li>
+</ul>
+ </div>
+		<div id="content">
+			<h1>Website <a name='Website'></a></h1>
+
+			<p>
+Created Wednesday 11 August 2021
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Around the Web <a name='Website:Around the Web'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>References <a name='Website:References'></a></h1>
+
+			<p>
+Created Saturday 28 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Art <a name='Website:References:Art'></a></h1>
+
+			<p>
+Created Saturday 28 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Books <a name='Website:References:Art:Books'></a></h1>
+
+			<p>
+Created Saturday 28 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Eng <a name='Website:References:Art:Books:Eng'></a></h1>
+
+			<p>
+Created Saturday 28 October 2023
+</p>
+<br>
+<br>
+<p>
+0: "1984 by George Orwell"<br>
+1: "A Confederacy of Dunces by John Kennedy Toole"<br>
+2:"A River Runs Through It by Norman Maclean"<br>
+3:"A Separate Peace by John Knowles"<br>
+4:"A Tale of Two Cities by Charles Dickens"<br>
+5:"After Virtue by Alasdair MacIntyre"<br>
+6:"All Quiet on the Western Front by Erich Maria Remarque "<br>
+7:"Atlas Shrugged by Ayn Rand"<br>
+8:"Band of Brothers by Stephen Ambrose"<br>
+9:"Brave New World by Aldous Huxley"<br>
+10:"Cannery Row by John Steinbeck"<br>
+11:"Catch-22 by Joseph Heller"<br>
+12:"Cyrano de Bergerac by Edmond Rostand"<br>
+13:"Don Quixote by Miguel de Cervantes"<br>
+14:"Education of a Wandering Man by Luis L’Amour"<br>
+15:"Fahrenheit 451 by Ray Bradbury"<br>
+16:"Fear and Trembling by Soren Kierkegaard"<br>
+17:"For Whom the Bell Tolls by Ernest Hemingway"<br>
+18:"Frankenstein by Mary Shelley"<br>
+19:"From Here to Eternity by James Jones"<br>
+20:"Gates of Fire by Stephen Pressfield"<br>
+21:"Hamlet by William Shakespeare"<br>
+22:"Hatchet by Gary Paulsen"<br>
+23:"Heart of Darkness by Joseph Conrad"<br>
+24:"How to Win Friends and Influence People by Dale Carnegie"<br>
+25:"Into Thin Air by Jon Krakauer"<br>
+26:"Invisible Man by Ralph Elliso"<br>
+27:"King Solomon’s Mines by H. Rider Haggard"<br>
+28:"Les Miserables by Victor Hugo"<br>
+29:"Leviathan by Thomas Hobbes<br>
+30:"Lives by Plutarch"<br>
+31:"Lonesome Dove by Larry McMurtry"<br>
+32:"Man’s Search for Meaning by Viktor Frankl"<br>
+33:"Meditations by Marcus Aurelius"<br>
+34:"Moby Dick by Herman Melville"<br>
+35:"Native Son by Richard Wright"<br>
+36:"Nicomachean Ethics by Aristotle"<br>
+37:"Oil! by Upton Sinclair"<br>
+38:"On the Road by Jack Kerouac"<br>
+39:"One Hundred Years of Solitude by Gabriel Garcia Marquez"<br>
+40:"Paradise Lost by John Milton"<br>
+41:"Pride &amp;amp; Prejudice by Jane Austen"<br>
+42:"Resilience by Eric Greitens "<br>
+43:"Revolutionary Road by Richard Yates"<br>
+44:"Robinson Crusoe by Daniel Defoe"<br>
+45:"Roman Honor by Carlin Barton"<br>
+46:"Self-Control: Its Kingship and Majesty by William George Jordan"<br>
+47:"Self-Reliance &amp;amp; Other Essays by Ralph Waldo Emerson<br>
+48:"Slaughterhouse-Five by Kurt Vonnegut"<br>
+49:"Steppenwolf by Herman Hesse"<br>
+50:"Swiss Family Robinson by Johann David Wyss"<br>
+51:"Tarzan of the Apes by Edgar Rice Burroughs"<br>
+52:"The 7 Habits of Highly Successful People by Stephen Covey"<br>
+53:"The Adventures of Huckleberry Finn by Mark Twain"<br>
+54:"The Art of War by Sun Tzu"<br>
+55:"The Autobiography of Benjamin Franklin"<br>
+56:"The Autobiography of Malcolm X"<br>
+57:"The Bible"<br>
+58:"The Book of Deeds of Arms and Chivalry by Christine de Pizan"<br>
+59:"The Boy Scout Handbook (1st Edition)"<br>
+60:"The Boys of Summer by Roger Kahn"<br>
+61:"The Brothers Karamazov by Fyodor Dostoevsky"<br>
+62:"The Call of the Wild by Jack London"<br>
+63:"The Code of Man by Waller Newell"<br>
+64:"The Count of Monte Cristo by Alexander Dumas"<br>
+65:"The Dharma Bums by Jack Kerouac "<br>
+66:"The Divine Comedy by Dante Alighieri"<br>
+67:"The Federalist Papers"<br>
+68:"The Godfather by Mario Puzo"<br>
+69:"The Grapes of Wrath by John Steinbeck"<br>
+70:"The Great Gatsby by F. Scott Fitzgerald"<br>
+71:"The Great Railway Bazaar by Paul Theroux"<br>
+72:"The Histories by Herodotus"<br>
+73:"The Hobbit &amp;amp; The Lord of the Rings by J.R.R. Tolkien"<br>
+74:"The Iliad &amp;amp; The Odyssey by Homer"<br>
+75:"The Killer Angels by Michael Shaara"<br>
+76:"The Last Lion Trilogy by William Manchester"<br>
+77:"The Last of the Mohicans by James FenimoreCooper"<br>
+78:"The Long Goodbye by Raymond Chandler"<br>
+79:"The Lord of the Flies by William Golding"<br>
+80:"The Maltese Falcon by Dashiell Hammet"<br>
+81:"The Master and Margarita by Mikhail Bulgakov"<br>
+82:"The Naked and the Dead by Norman Mailer"<br>
+83:"The Outsiders by S. E. Hinton"<br>
+84:"The Prince by Niccolo Machiavelli"<br>
+85:"The Republic by Plato"<br>
+86:"The Road by Cormac McCarthy"<br>
+87:"The Stranger by Albert Camus"<br>
+88:"The Sun Also Rises by Ernest Hemingway"<br>
+89:"The Thin Red Line by James Jones"<br>
+90:"The Wealth of Nations by Adam Smith"<br>
+91:"Theodore Roosevelt Trilogy by Edmun Morris"<br>
+92:"This Boy’s Life by Tobias Wolff"<br>
+93:"Thus Spoke Zarathustra by Friedrich Nietzsche"<br>
+94:"To Kill A Mockingbird by Harper Lee"<br>
+95:"Treasure Island by Robert Louis Stevenson"<br>
+96:"Ulysses by James Joyce"<br>
+97:"Walden by Henry David Thoreau "<br>
+98:"With the Old Breed by Eugene Sledge"<br>
+99:"Zen and the Art of Motorcycle Maintenance by Robert Pirsig"
+</p>
+<br>
+<p>
+The Sound and the Fury by William Faulkner; <br>
+Lolita by Vladimir Nabokov; <br>
+Gravity's Rainbow by Thomas Pynchon; <br>
+East of Eden by John Steinbeck; <br>
+Catch-22 by Joseph Heller.
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Indo <a name='Website:References:Art:Books:Indo'></a></h1>
+
+			<p>
+Created Saturday 28 October 2023
+</p>
+<br>
+<p>
+Conspiracy: Pretty much anything written by Es It<br>
+Science Fiction: Jatuh ke Matahari by Djokolelono (this one is a classic<br>
+Philosophical: Pretty much anything by Y.B. Mangunwija<br>
+Pseudo-Realism: Lubang Dari Separuh Langit by Afrizal Malna (this one's a mindfuck), Premortem by J. Ang<br>
+Drama: Anything from N.H. Dini or Marga T., or you can go to any major bookstore, they have tons of i<br>
+Thriller: Anything by Ayu Uta<br>
+Gender issues: Djenar Maesa Ayu has plenty of it (and also, Ayu Utam<br>
+Horror: Anything written in 80's by Abdullah Harahap. Seriously, he is the real deal! Hollywood's horror got nothing on him. You know how scary Indonesian horror stories could be, this guy weaved every sentences like he actually lived them. If you hate sleep, go read his books
+</p>
+<br>
+<p>
+Tetralogi Buru karya Pramoedya Ananta Toer<br>
+Supernova series - dewi lestari for something more of fantas<br>
+Cantik itu luka - eka kurniawan (it's just good, just read i<br>
+Books from Putu oka sukan<br>
+Trilogi Ronggeng Dukuh Paruk - Ahmad Toha<br>
+Amba - Laksmi Pamuntj<br>
+Raden Mandasia si Pencuri Daging Sapi - Yusi Avianto Pareanom
+</p>
+<br>
+<p>
+Seno Gumira Ajidar
+</p>
+<br>
+<p>
+Sebuah Pertanyaan untuk Cinta (Highly recommended)<br>
+Negeri Kabut<br>
+aku kesepian sayang datanglah menjelang kematian.<br>
+Sepotong Senja untuk Pacarku (Highly recommended)<br>
+Danar<br>
+Godlob<br>
+Kaca Piring (Highly recommended)<br>
+Sapardi Djoko Darmo<br>
+Kolam (Highly recommended)<br>
+Hujan Bulan Juni (Highly recommended)<br>
+Canting<br>
+Arswendo Atmowilo<br>
+Dua Cinta
+</p>
+<br>
+<p>
+Merahnya merah dan ziarah. Karya iwan simatupang.
+</p>
+<br>
+<p>
+A lot of Pramoedya Ananta Toer's books are for sale again in Gramedia now; most essential is the "Tetralogi Buru": Bumi Manusia, Anak Semua Bangsa, Jejak Langkah and Rumah Kaca. Bumi Manusia stands on its own if you don't want to dive into the whole tetralogy. Bukan Pasar Malam is a really nice early novella of his.
+</p>
+<br>
+<p>
+Here are some classics, all of which I personally recommend: Belenggu by Armijn Pane, Atheis by Achdiat K. Mihardja, Ziarah by Iwan Simatupang, Para Priyayi by Umar Kayam, and Tarian Bumi by Oka Rusmini. Eka Kurniawan's Cantik Itu Luka and Lelaki Harimau are on their way to classic status.
+</p>
+<br>
+<p>
+As for where to get them: I was in Gramedia a couple weeks ago and saw the Eka, the Oka, and the Pramoedya. Older literature is hit or miss; it will get reprinted, then fall out of print again, and then might appear later. You can find used copies of some things in Blok M Square in Jakarta but in my experience it's best to go there with a long list of possible authors and titles, since you never know what will be available.
+</p>
+<br>
+<p>
+Another option: if you have borrowing privileges at a major university library (think UI or UGM), you can borrow the book and then bring it to a print shop (like where students go to print assignments, jilid skripsi etc.) to make a reproduction. If you want to save money you can just have just a plain paper cover, but they can also produce professional-looking books. There are tons of these kinds of shops near campuses; you might have to try a few, since price and quality vary.
+</p>
+<br>
+<p>
+The canon if Indonedian literature has been pretty much established, from Raja Ali Hadji up to 2010-ish literary works. The ones already mentioned by others are some of the canon + a few overrated names. A popular book doesn't always mean it's good in terms of literary merit, but it's all about the mass' taste, the zeitgeist, etc.
+</p>
+<br>
+<p>
+A few names/books that deserve wider readership:<br>
+Essays: Goenawan Mohamad (the volumes of Catatan Pinggir from the 80's-90's are gold, the current ones are more of recycled thoughts and ideas), Hasif Amini, Nirwan Arsuka (on science, sociocultural, literature). Other non-fiction works about Indonesia are too broad to name.<br>
+Poetry: Chairil Anwar, Sapardi Djoko Damono, GM again, Afrizal Malna, Joko Pinurbo.<br>
+Literary fiction: The (not-too) oldies--any Iwan Simatupang, Budi Darma (Olenka), Umar Kayam (Kunang2 di Manhattan), Ahmad Tohari, Seno Gumira Adjidharma (Jazz parfum dan Insiden).<br>
+Excellent but underrated literary fictions: A.S. Laksana (a regressing fabulist), Nukila Amal (beautiful aphoristic writing, Inception-like), Linda Christanty (political and other shits humans do, clean prose), Azhari (his stories have a certain hikayat feel about them)
+</p>
+<br>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Cooking <a name='Website:References:Art:Cooking'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+Professional chef here,<br>
+Masakan Indonesia sebenernya banyak kok yang bumbunya sama. Basicnya cuma bawang merah, bawang putih, kunyit, jahe, lengkuas, cabe merah, ketumbar, daun salam, sereh, dan kemiri. Yang beda-bedain tinggal perbandingannya aja.<br>
+Mau bikin soto? bahan-bahan yang tadi disebut tinggal dialusin (kecuali sereh dan daun salam), goreng dengan minyak sedikit sampe wangi, tambah air + santan di akhir (optional)<br>
+Mau bikin rendang? goreng lagi bumbunya, tambah daun kunyit (optional), tambah daging sampe kecoklatan, tambah santen yang banyak, tunggu deh sampe kering.<br>
+Mau bikin rica-rica? Tinggal cabainya dibanyakin + tambah tomat.<br>
+Makanan Indo emang butuh banyak herbs and spices, keliatannya ribet, tapi method of cookingnya gitu-gitu doang sebenernya.<br>
+Edit: Sedikit acidity juga ngebantu nambahin rasa gurih di masakan. Coba tambahin sedikit air asam jawa atau perasan jeruk nipis ke masakannya.
+</p>
+<br>
+<p>
+Nasinya itu intinya airnya yang ada di butir nasi minimal. Ada yang nasinya ditunggu umurnya sehari (atau nasi sisa sehari sebelumnya). Cara cepat : pake basmati atau long grain, atau nasi di microwave sampe keringnya cocok
+</p>
+<br>
+<p>
+Pake minyak yang banyak. Kalau pengen rasanya sama dengan warung,pake minyak yang banyak. Coba search di youtube nasi goreng warung,jangan kaget dengan jumlah minyak yang dipake.
+</p>
+<br>
+<p>
+Inti nasi goreng yang enak itu adalah minyak goreng yang diresapi (infused) dengan bawang putih (dan kemiri). Caranya bisa pake trik yang beredar di internet (minyak goreng + bawang putih + kemiri diblender/diuleg, kemudian ditinggal semalam di kulkas baru siap pakai),atau pake cara seperti memasak aglio lio. Yaitu minyak goreng + bawang putih dipotong setipis2nya + kemiri dipotong setipis2nya,kemudian dengan api paling kecil,sampe bawang putih berubah kuning.
+</p>
+<br>
+<p>
+Minyak goreng di atas itu bukan untuk menggoreng nasi,tapi untuk membaluti nasi dengan minyaknya. Ini filosofi wok stir fry.
+</p>
+<br>
+<p>
+Pake api sepanas-panasnya ketika nasi masuk (dan kecap),dan kecepatan tinggi (2 menit maksimal). Sebelum nasi masuk, semua bumbu sudah masuk. Jadi pinter2 ngiranya. Kalau kelamaan,nasinya melembek. Masih enak sih
+</p>
+<br>
+<p>
+Inti nasi goreng kayanya seperti itu. Bisa ditambah daging,dll. Bumbunya ya standard msg,merica,kaldu bubuk,garam.
+</p>
+<br>
+<p>
+Saya pake basmati,dan rasanya konsisten enak seperti di warung2.
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Choc Chip Cookies <a name='Website:References:Art:Cooking:Choc Chip Cookies'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+Here's the recipe, from &lt;a href="<a href="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" title="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" class="http">http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/</a>" title="<a href="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" title="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" class="http">http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/</a>" class="http"&gt;<a href="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" title="http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/" class="http">http://hostthetoast.com/best-chewy-cafe-style-chocolate-chip-cookies/</a>&lt;/a&gt; (There's a video there as well)
+</p>
+<br>
+<p>
+INGREDIENTS<br>
+2 cups + 2 tablespoons all purpose flour<br>
+1 teaspoon baking soda<br>
+2 teaspoons cornstarch<br>
+1 ½ sticks (6 oz) butter, melted and cooled<br>
+1 teaspoon salt<br>
+1 cup dark brown sugar, lightly packed<br>
+½ cup granulated sugar<br>
+2 large eggs<br>
+2 teaspoons vanilla extract<br>
+1 1/2 cups dark chocolate chips, plus more for topping
+</p>
+<br>
+<p>
+INSTRUCTIONS<br>
+In a medium-sized bowl, whisk together the flour, baking soda, cornstarch, and salt. Set aside.<br>
+In a large bowl, beat together the cooled melted butter and the sugars with a hand-mixer for about one minute. Then, add in the eggs and vanilla extract. Beat until just combined.<br>
+Slowly add in the dry ingredients and mix briefly, just until there are no flour clumps left. Fold in the chocolate chips.<br>
+Cover and refrigerate the dough for 30 minutes to an hour.<br>
+Remove the dough from the refrigerator and preheat the oven to 350°F, making sure you have the racks in the middle of the oven. Line two baking sheets with parchment paper.<br>
+Scoop 1/4 cup of cookie dough at a time and roll into balls. Then, tear the balls in half by pulling gently on both sides. Smush the two halves together again, but this time have the lumpy, torn sides face upward. Place on the prepared baking sheet, making sure the cookies have plenty of space to spread. You should be able to fit 6-8 cookies on each tray.<br>
+Bake for about 12-14 minutes, rotating half-way through, or until the cookies have spread out and the edges are golden, but the centers of the cookies still look soft and undercooked. Every oven is different, so I recommend starting with just one or two cookies on the tray to see what baking time works best for you!<br>
+Let the cookies cool on the baking sheets until the cookies are firm enough to remove, about 15 minutes. As the cookies are cooling, press additional chocolate chips into the tops for a more bakery-style look.<br>
+Repeat with remaining batches, until all cookies are baked. Enjoy with a cold glass of milk! 
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Manga <a name='Website:References:Art:Manga'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+Rookies<br>
+Jojo's Bizarre Adventure<br>
+Berserk<br>
+Lone Wolf and Cub<br>
+20th/21st Century Boys<br>
+Dorohedoro<br>
+REAL<br>
+Space Brothers<br>
+Vagabond<br>
+Kaiji<br>
+Shingeki no Kyojin<br>
+Battle Angel Alita<br>
+Oyasumi PunPun<br>
+Yotsubato<br>
+Koe no Katachi/A silent Voice<br>
+Haikyuu<br>
+Hajime no Ippo<br>
+Battle Royale<br>
+Slam Dunk<br>
+Kokou no Hito<br>
+Vinland Saga<br>
+Kingdom<br>
+Bokurano<br>
+Assassination Classroom<br>
+One Piece<br>
+Eyeshield 21<br>
+Majin Tantei Nougami Neuro<br>
+Monster<br>
+Lucifer and the Biscuit Hammer<br>
+One Punch Man<br>
+Blade of the Immortal<br>
+Sanctuary<br>
+Touch<br>
+cross game<br>
+Yokohama Kaidashi Kiko
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Movies <a name='Website:References:Art:Movies'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+1952<br>
+Bicycle Thieves (25 mentions)<br>
+City Lights (19 mentions)<br>
+The Gold Rush (19 mentions)<br>
+Battleship Potemkin (16 mentions)<br>
+Intolerance (12 mentions)<br>
+Louisiana Story (12 mentions)<br>
+Greed (11 mentions)<br>
+Le Jour Se Lève (11 mentions)<br>
+The Passion of Joan of Arc (11 mentions)<br>
+Brief Encounter (10 mentions)<br>
+The Rules of the Game (10 mentions)<br>
+Le Million (10 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: Citizen Kane, La Grande Illusion, and The Grapes of Wrath. (9 mentions apiece)
+</p>
+<br>
+<p>
+1962<br>
+Citizen Kane (22 mentions)<br>
+L'Avventura (20 mentions)<br>
+The Rules of the Game (19 mentions)<br>
+Greed (17 mentions)<br>
+Ugetsu (17 mentions)<br>
+Battleship Potemkin (16 mentions)<br>
+Bicycle Thieves (16 mentions)<br>
+Ivan the Terrible (16 mentions)<br>
+La Terra Trema (14 mentions)<br>
+L'Atalante (13 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: Hiroshima mon amour, Pather Panchali and Zero for Conduct. (11 mentions apiece)
+</p>
+<br>
+<p>
+1972<br>
+Citizen Kane (32 mentions)<br>
+The Rules of the Game (28 mentions)<br>
+Battleship Potemkin (16 mentions)<br>
+8½ (15 mentions)<br>
+L'Avventura (12 mentions)<br>
+Persona (12 mentions)<br>
+The Passion of Joan of Arc (11 mentions)<br>
+The General (10 mentions)<br>
+The Magnificent Ambersons (10 mentions)<br>
+Ugetsu (9 mentions)<br>
+Wild Strawberries (9 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: The Gold Rush, Hiroshima mon amour, Ikiru, Ivan the Terrible, Pierrot le Fou, and Vertigo. (8 mentions apiece)
+</p>
+<br>
+<p>
+1982<br>
+Citizen Kane (45 mentions)<br>
+The Rules of the Game (31 mentions)<br>
+Seven Samurai (15 mentions)<br>
+Singin' in the Rain (15 mentions)<br>
+8½ (14 mentions)<br>
+Battleship Potemkin (13 mentions)<br>
+L'Avventura (12 mentions)<br>
+The Magnificent Ambersons (12 mentions)<br>
+Vertigo (12 mentions)<br>
+The General (11 mentions)<br>
+The Searchers (11 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: 2001: A Space Odyssey and Andrei Rublev. (10 mentions apiece)
+</p>
+<br>
+<p>
+1992<br>
+Citizen Kane (43 mentions)<br>
+The Rules of the Game (32 mentions)<br>
+Tokyo Story (22 mentions)<br>
+Vertigo (18 mentions)<br>
+The Searchers (17 mentions)<br>
+L'Atalante (15 mentions)<br>
+The Passion of Joan of Arc (15 mentions)<br>
+Pather Panchali (15 mentions)<br>
+Battleship Potemkin (15 mentions)<br>
+2001: A Space Odyssey (14 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: Bicycle Thieves and Singin' in the Rain. (10 mentions apiece)
+</p>
+<br>
+<p>
+2002<br>
+Citizen Kane (46 mentions)<br>
+Vertigo (41 mentions)<br>
+The Rules of the Game (30 mentions)<br>
+The Godfather and The Godfather Part II (23 mentions)<br>
+Tokyo Story (22 mentions)<br>
+2001: A Space Odyssey (21 mentions)<br>
+Battleship Potemkin (19 mentions)<br>
+Sunrise: A Song of Two Humans (19 mentions)<br>
+8½ (18 mentions)<br>
+Singin' in the Rain (17 mentions)
+</p>
+<br>
+<p>
+Closest runners-up: Seven Samurai and The Searchers. (15 mentions apiece)
+</p>
+<br>
+<p>
+2012<br>
+Vertigo (1958)
+</p>
+<br>
+<p>
+A new rule was imposed for this ballot: related films that are considered part of a larger whole (e.g. The Godfather and The Godfather Part II, Krzysztof Kieślowski's Three Colors trilogy and Dekalog, or Satyajit Ray's The Apu Trilogy) were to be treated as separate films for voting purposes.
+</p>
+<br>
+<p>
+For the 2012 poll, Sight &amp;amp; Sound also listened to decades of criticism about the lack of diversity of its poll participants and made a huge effort to invite a much wider variety of critics and filmmakers from around the world to participate, taking into account gender, ethnicity, race, geographical region, socioeconomic status, and other kinds of underrepresentation.
+</p>
+<br>
+<p>
+Vertigo (191 mentions)<br>
+Citizen Kane (157 mentions)<br>
+Tokyo Story (107 mentions)<br>
+The Rules of the Game (100 mentions)<br>
+Sunrise: A Song of Two Humans (93 mentions)<br>
+2001: A Space Odyssey (90 mentions)<br>
+The Searchers (78 mentions)<br>
+Man with a Movie Camera (68 mentions)<br>
+The Passion of Joan of Arc (65 mentions)<br>
+8½ (64 mentions)
+</p>
+<br>
+<p>
+Closest runner-up: Battleship Potemkin. (63 mentions)
+</p>
+<br>
+<p>
+Directors' Top Ten Poll<br>
+1992<br>
+Citizen Kane<br>
+8½<br>
+Raging Bull<br>
+La Strada<br>
+L'Atalante<br>
+The Godfather<br>
+Modern Times<br>
+Vertigo<br>
+The Godfather Part II<br>
+The Passion of Joan of Arc<br>
+Rashomon<br>
+Seven Samurai
+</p>
+<br>
+<p>
+2002<br>
+Citizen Kane<br>
+The Godfather and The Godfather Part II<br>
+8½<br>
+Lawrence of Arabia<br>
+Dr. Strangelove<br>
+Bicycle Thieves<br>
+Raging Bull<br>
+Vertigo<br>
+Rashomon<br>
+The Rules of the Game<br>
+Seven Samurai
+</p>
+<br>
+<p>
+2012<br>
+Tokyo Story (48 mentions)<br>
+2001: A Space Odyssey (42 mentions)<br>
+Citizen Kane (42 mentions)<br>
+8½ (40 mentions)<br>
+Taxi Driver (34 mentions)<br>
+Apocalypse Now (33 mentions)<br>
+The Godfather (31 mentions)<br>
+Vertigo (31 mentions)<br>
+Mirror (30 mentions)<br>
+Bicycle Thieves (29 mentions)
+</p>
+<br>
+<p>
+Greatest Documentaries of All Time<br>
+2014<br>
+Man with a Movie Camera (100 votes)<br>
+Shoah (68 votes)<br>
+Sans Soleil (62 votes)<br>
+Night and Fog (56 votes)<br>
+The Thin Blue Line (49 votes)<br>
+Chronique d'un été (32 votes)<br>
+Nanook of the North (31 votes)<br>
+The Gleaners and I (27 votes)<br>
+Dont Look Back (25 votes)<br>
+Grey Gardens (25 mentions)
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Travel <a name='Website:References:Art:Travel'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Jakarta <a name='Website:References:Art:Travel:Jakarta'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+The Jaya Pub<br>
+One of the oldest in Jakarta. Went there last Halloween friday night, good vibes great live bands playing 70's/80's music
+</p>
+<br>
+<p>
+Cazbar, and De Burse. <br>
+Look for a guy with long bleached hair named Sule -- he's my peers' favourite classic rock guy.
+</p>
+<br>
+<p>
+Murphy's kemang, <br>
+Beer Garden radio dalam (Kemang and SCBD are too crowded)<br>
+SQ Dome at TB Simatupang<br>
+De Hooi in pondok indah area 	
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Semarang <a name='Website:References:Art:Travel:Semarang'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+Jalan2 ke Goa Kreo aja, sekalian kenalan sama sepupu jauh. <br>
+Viewnya Bendungan Jatibarang juga not bad kok.
+</p>
+<br>
+<p>
+Saranku karena ini musim ujan, jangan ke tempat2 wisata gede. <br>
+Lawang Sewu, Maerokoco, Kota Lama banjirrr. <br>
+Bonbin juga sekarang udah jelek. <br>
+Gedong Songo mungkin masih bisalah dikunjungi, tapi kalau ujan tetap bahaya. <br>
+Kampung Pelangi completely not worth it. <br>
+Basically selama musim hujan, fix deh makan2 aja.
+</p>
+<br>
+<p>
+Nih daftar tempat makan paling enak yang pernah kucoba
+</p>
+<br>
+<p>
+Best all you can eat buffet - Gumaya Tower Hotel<br>
+Best sop iga/iga bakar (agak mahal) - Sop Iga Pak To di dekat RS. Elizabeth<br>
+Best authentic pizza - The Tavern, Jl. Rinjani daerah Gajahmungkur<br>
+Best nasi goreng - Nasi Goreng Paijo, Jl. Kanfer Raya, daerah Banyumanik (behind my parents' house heh heh)<br>
+Best home made steak - Adi's Cafe, Jl. Erlangga dalam, daerah Pleburan<br>
+Best zuppa soup, plus their cheese nasgor is very good - Dapur Keju, Jl. Sultan Agung gang kecil sebrang KFC (bukan jalan gedenya, maju dikit baru belok kanan), daerah Akpol Semarang<br>
+Best authentic carbonara - Coco Madelaine, Jalan seberang KFC tadi tapi yang jalan gede, setelah gang pertama persis kiri jalan<br>
+Best waffle and ice cream cafe- Loffle, Tembalang dan Pleburan.<br>
+And if you love fish, IBC in kota lama is the best one. Forget Kampung Laut.
+</p>
+<br>
+<p>
+Sayangnya aku ndak tau tempat nongkrong sambil ngopi yang enak, cuz fuck me I have no friends.
+</p>
+<br>
+<p>
+also please for the love of God, hindari daerah Kaligawe (Unissula, Genuk, jalan ke arah Demak dan Kudus). Banjir setinggi jok motor kalau pas ujan.
+</p>
+<br>
+<p>
+Nasgor babat yang gurih menurutku sih belum ada yang mengalahkan Paijo sih.
+</p>
+<br>
+<p>
+Kalau lebih suka yang manis, ada satu warung di daerah Kota Lama. Warungnya kecil banget, warna ijo terang. Parkir aja di Kantor Pos Kota Lama, terus jalan dikit ke arah kali. Atau tanya orang, nasgor babat warung ijo gitu.
+</p>
+<br>
+<p>
+Kalau mau alternatif, ada juga yang enak beut di swalayan ADA Banyumanik lantai 3. Ada dua nasi goreng sebelahan (kiri Bakmi Jowo tp ada nasgornya, kanan Nasi Goreng). Istri lebih suka yang kanan karena nasgornya lebih manis, aku lebih suka yang kiri karena lebih gurih.
+</p>
+<br>
+<p>
+Kalo mau kulineran disarankan jangan makan di PKL sekitar Simpang Lima dan Taman Menteri Supeno. Rasa biasa harga luar biasa (mahalnya). Kemarin iseng beli gudeg 2 lauk ayam dithuthuk 60 ribu. Beberapa rekomendasi tempat makan di Semarang:
+</p>
+<br>
+<p>
+Kucingan Pak Gik di Gajah Mada. Buka jam 11 malem.
+</p>
+<br>
+<p>
+Bubur ayam depan Java Mall. Buka tengah malem. Bisa sekalian jalan2 di Pasar Peterongan yang aktivitas dagangnya mulai dari jam 1 pagi.
+</p>
+<br>
+<p>
+Bakmi Jowo Noemani di depan Paragon Mall. Jam 9 -10 sudah habis biasanya so dateng sorean dikit lebih baik.
+</p>
+<br>
+<p>
+Seafood Ojo Dumeh di depan RS. Elizabeth. Harus sabar karena masaknya agak lama, but worth it.
+</p>
+<br>
+<p>
+Japanese food Depot Sukses di Gajah Mada dan Tembalang. Harga mulai dari 20k sampai 30k sudah termasuk minum.
+</p>
+<br>
+<p>
+Lumpia Mbak Lien depan Sriratu Pemuda. Halal.
+</p>
+<br>
+<p>
+Daerah Pandaran kalo mau beli oleh - oleh. One Stop Shopping dari mulai Bandeng sampe dodol juga ada.
+</p>
+<br>
+<p>
+Daerah Tembalang karena di situ tempat hidup khalayak mahasiswa Undip. Jam 9 ke atas udah mulai sepi dan banyak yang tutup.
+</p>
+<br>
+<p>
+Beberapa tempat nongkrong yang enak menurut gw:
+</p>
+<br>
+<p>
+Legends Coffee di Mugas. Variasi kopi dan menunya banyak. Yang bikin recommended itu bisa sewa card/board games buat seru - seruan bareng (uno, jenga, scrabbles, etc).
+</p>
+<br>
+<p>
+Angkringan Museum di Museum Mandala Bhakti depan Tugu Muda. Siang main ke museum malemnya bisa nongkrong di situ. Jam 12 udah tutup.
+</p>
+<br>
+<p>
+Han's Kopi di Pasar Bulu, sebelahnya Museum Mandala Bhakti. Variasi kopi dikit tapi viewnya dapet (Tugu Muda + Lawang Sewu kalo malem cakep). 24 jam.
+</p>
+<br>
+<p>
+Peacock Coffee di deket RS. Kariadi. Tempatnya + parkirannya kecil. Menurut gw kopinya enak + variasinya lumayan.
+</p>
+<br>
+<p>
+Pondok Kopi di Bandungan. Tempatnya jauh di atas Semarang bukit, viewnya 10/10 kalo nggak berkabut. Jualan view doang, variasi kopi dikit (katanya sih pake kopi sachetan).
+</p>
+<br>
+<p>
+Sakapatat Beer Garden di Jl. Diponegoro. Definitely haram.
+</p>
+<br>
+<p>
+Kebanyakan wisata di Semarang itu landmarks sih kayak Simpang Lima, Tugu Muda, Lawang Sewu, Greja Blendhuk, Sam Poo Kong, Pagoda Watugong, Masjid Agung Jateng, atau Kota Lama. Kalo seneng foto2 sih bisa dikunjungi beberapa tempat di atas.
+</p>
+<br>
+<p>
+Kalo mau wisata yang adem bisa ke Bandungan. Di sana ada Candi Gedong Songo dan beberapa villa yang siap dipakai kapan saja ( ͡° ͜ʖ ͡°)
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>IT <a name='Website:References:IT'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>General <a name='Website:References:IT:General'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+Download Open Directories Script<br>
+wget -r -e robots=off -np -nc --accept mobi,cbz,cbr,cbc,chm,epub,fb2,lit,lrf,odt,pdf,prc,pdb,pml,rb,rtf,tcr,txt,zip,rar,tar,sit --reject htm,html
+</p>
+<br>
+<p>
+Windows<br>
+Installation<br>
+choco install 7zip anki calibre ccleaner clementine cygwin dropbox emet f.lux freeplane gimp git.install hugin googlechrome inkscape jre8 libreoffice malwarebytes nodejs.install pdfsam powershell r.project scribus smplayer sublimetext3 sumatrapdf.install zim chocolatey emacs sysinternals youtube-dl -y<br>
+npm install -g bower<br>
+bower install jquery picnic
+</p>
+<br>
+<p>
+Other Packages<br>
+foobar2000 sublimetext3.packagecontrol wget tor-browser <br>
+utorrent daemon easeus gmic ice idm line office minitab smadav spss synaptic
+</p>
+<br>
+<p>
+Linux<br>
+Installation<br>
+sudo apt-get remove abiword* apport* apt-xapian-index* gigolo* gmusicbrowser* gnome-mines* gnome-sudoku* gnomine* gnumeric* mousepad* parole* pidgin* ristretto* software-center* thunderbird* xchat* xfburn* xfce4-screenshooter* yelp*<br>
+sudo apt-get install feh git gparted i3 idle3 libav-tools p7zip-full python-gpgme python-pip python3-pip python-tk python3-tk redshift-gtk shutter synaptic ttf-mscorefonts-installer xubuntu-restricted-extras calibre cmus geeqie gimp-gmic hugin keepassx lyx mupdf mupdf-tools playonlinux scribus smplayer ufraw wings3d xchm zim texlive-full libreoffice<br>
+sudo apt-get install jack ardour audacity qtractor hydrogen yoshimi rakarrack guitarix gladish qjackctl puredata supercollider csound chuck blender mypaint openshot darktable<br>
+sudo wget &lt;a href="<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>" title="<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>" class="https"&gt;<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>&lt;/a&gt; -O /usr/local/bin/youtube-dl<br>
+sudo chmod a+rx &lt;a href="<a href="file:///usr/local/bin/youtube-dl" title="file:///usr/local/bin/youtube-dl" class="file">file:///usr/local/bin/youtube-dl</a>" title="/usr/local/bin/youtube-dl" class="file"&gt;/usr/local/bin/youtube-dl&lt;/a&gt;<br>
+sudo apt-get install lib32stdc++6
+</p>
+<br>
+<p>
+Other Packages<br>
+dropbox, chrome, android studio, subl, steam
+</p>
+<br>
+<p>
+Maintenance<br>
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get -y upgrade &amp;amp;&amp;amp; sudo apt-get -y dist-upgrade<br>
+sudo apt-get autoremove &amp;amp;&amp;amp; sudo apt-get -y autoclean &amp;amp;&amp;amp; sudo apt-get -y clean 
+</p>
+<br>
+<p>
+Performance<br>
+sudo nano /etc/sysctl.conf<br>
+vm.swappiness=1<br>
+vm.vfs_cache_pressure=50<br>
+sudo nano /etc/rc.local<br>
+fstrim /
+</p>
+<br>
+<p>
+Display Troubleshoot<br>
+exec --no-startup-id redshift-gtk -l -7.7956:110.3695<br>
+xrandr --output VGA-1 --brightness 0.5<br>
+xrandr --newmode "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync &amp;amp;&amp;amp; xrandr --addmode VGA-1 1440x900_60.00 &amp;amp;&amp;amp; xrandr --output VGA-1 --mode 1440x900_60.00
+</p>
+<br>
+<p>
+Setting Environment Variables<br>
+export PATH=${PATH}:path/to/file
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Social <a name='Website:References:Social'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+How is it that the one percenters can continue to milk the cash cow with no thought for an end game? The business model of squeezing the lower classes is not sustainable. I know global business leaders don't lack vision. Do they just not care? Is acquisition of wealth a goal in itself? Why?
+</p>
+<br>
+<p>
+Resource rapine must be fun while it lasts. I wouldn't know. But without rebuilding the middle class to pump more money into the economy the resources are finite, and the under class won't be satisfied with bread and circuses forever. I saw a woman in a wheel chair hoist herself up on the side of a dumpster, legs dangling limply, so she could rummage for food, aluminum cans, etc. What kind of world, what kind of America is that?
+</p>
+<br>
+<p>
+Edit: this kind of blew up, and I'm grateful for the discussion. But to answer my own question, I think there's a few of things going on: gluttony, sociopathy, and functional fixedness.
+</p>
+<br>
+<p>
+Gluttony, because avarice seems to be an end onto itself, and because the "haves" control the corporations which are required by law to maximize profit for the shareholders.
+</p>
+<br>
+<p>
+Sociopathy because the "haves" got theirs and "devil take the hind most," however short sighted that is.
+</p>
+<br>
+<p>
+Functional fixedness, because it's easier to rape resources and milk the cash cow than it is to consider a triple bottom line, easier to care about and focus on the single metric of profit, rather than concern themselves with any long game of protecting the consumers of their products and services, the sources of their raw materials, or the environment, especially when it pushes up against their sole metric.
+</p>
+<br>
+<p>
+I in part blame government, not because it's not giving handouts to the "have nots" but because it has failed to adequately regulate business.
+</p>
+<br>
+<p>
+I partly blame business schools who have failed to adapt curriculum to a shifting world view, culture, and economy.
+</p>
+<br>
+<p>
+And I partly blame the media for reasons which should be obvious, RIP the fourth estate.
+</p>
+<br>
+<p>
+And I partly blame "the have nots" for letting it all happen, though really, we're just a frog in the pot set to boil.
+</p>
+<br>
+<p>
+People don’t like paying taxes - independent of status. However, in the past, there was an important reason to fully fund social programs - humans were useful. The industrialists needed literate and healthy workers and did not want to solely own the burden of providing education and health services for them. The state needed well trained and healthy soldiers and administrators. You also had a strong wave of socialism spreading through industrialized nations which incentivized capitalists to pony up a bit more for social programs. Today, industry and armies increasingly require far fewer individuals, leading to a dramatic increase in the number of “useless” humans. In the near future, with continued automation and development of ever smarter AIs, the number of people with no real use to society will grow dramatically. Combine this with the collapse of almost every socialist state, and you remove almost all incentive to fund state social programs. Since the wealthy see their taxes as largely paying for these services, and since they no longer benefit in the same way they used to, you see a desire on their part to dismantle state social programs and reduce their tax bill. The folly of course being when you have a dystopian society with a very few haves and a great many have-nots, the haves often times end up losing their heads. 
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Work <a name='Website:References:Work'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Audit <a name='Website:References:Work:Audit'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Intro <a name='Website:References:Work:Audit:Intro'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+dapet laporan keuangan dari perusahaan<br>
+cek risiko inheren akun berdasarkan jumlah transaksi dan besarnya serta subjektivitas, kompleksitas, dan kemudahan untuk dimanipulasi<br>
+asersi manajemen berupa eksistensi atau terjadinya, valuasi atau pengukuran, kelengkapan, kepemilikan &amp;amp; obligasi, serta presentasi &amp;amp; pengungkapan<br>
+kelas transaksi yang signifikan terbagi menjadi rutin, non-rutin, &amp;amp; estimati, proses bisnis, proses it, dan proses penyelesaian laporan<br>
+what can go wrong? identifikasi titik-titik rawan di dalam proses<br>
+apakah ada kontrol<br>
+jenis kontrol tersebut, apakah preventif korektif, siapa yang melakukan, apakah terprogram<br>
+evaluasi, otorisasi segregasi dokumentasi
+</p>
+<br>
+<p>
+model risiko audit = risiko inheren + kontrol + audit
+</p>
+<br>
+<p>
+ada psp osp sap key items representative samplingz
+</p>
+<br>
+<p>
+kalau risiko inheren rendah dan ada kontrol maka bukti yang diambil proporsi paling besar adalah tes kontrol lalu prosedur substantif primer dan prosedur substantif lainnya<br>
+kalau risiko inheren rendah namun tidak ada kontrol maka bukti yang diambil hanya dari prosedur substantif primer dan prosedur substantif lainnya<br>
+kalau risiko inheren tinggi dan ada kontrol maka bukti yang diambil seimbang antara tes kontrol, prosedur substantif primer, &amp;amp; prosedur substantif lainnya<br>
+kalau risiko inheren tinggi dan tidak ada kontrol maka bukti yang diambil dari prosedur substantif primer dan prosedur substantif lainnya, namun mungkin komposisinya berbeda
+</p>
+<br>
+<p>
+terus ke minimum testing treshold dan timing procedure<br>
+kalau untuk yang minimal bisa 100-75 te, low 75-50 te, moderate 50-25 te, high 25-10 te ini untuk yang akun asset atau income<br>
+kalau untuk yang minimal bisa 50-25te, low 25-15 te, moderate 15-10 te, high 10-5te ini untuk yang akun liabilities atau expense
+</p>
+<br>
+<p>
+untuk timing procedure, <br>
+yang risikonya minimal bisa masa-masa awal periode pelaporan yaitu sampai 6 bulan<br>
+yang risikonya low (inheren besar tapi ada kontrol) bisa maksimal 3 bulan<br>
+yang lainnya semua sampai dengan 1 bulan sebelum tanggal neraca
+</p>
+<br>
+<p>
+untuk minimum sampling, kalo termasuk banyak biasanya 10%<br>
+kalau dibawah 50 minimum 5<br>
+kalau dibawah 5 biasanya 100%examination
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>PSP <a name='Website:References:Work:Audit:PSP'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+<p>
+kas <br>
+konfirmasi ke pihak bank untuk semua akun signifikan dan akun yang ditutup pada periode. Bisa mengecek akun lain apabila dibutuhkan,<br>
+cek rekonsiliasi bank termasuk akun cash in transfer untuk memverifikasi rekonsiliasi dan akun buku besar. investigasi semua item tidak wajar dan tes item lainnya sesuai dengan testing treshold.<br>
+tes cutoff penerimaan dan pengeluaran kas antar akun bank sampai tanggal neraca.
+</p>
+<br>
+<p>
+sekuritas diperjualbelikan<br>
+verifikasi eksistensi dan kepemilikan sekuritas tercatat melalui konfirmasi atau apabila dibutuhkan dengan melihat bukti kepemilikan <br>
+valuasi pasar. verifikasi valuasi dengan mengambil bukti berupa harga pasar atau bukti-bukti pendukung lainnya.<br>
+valuasi berdasar kebijakan akuntansi. verifikasi apakah valuasi telah sesuai dengan kebijakan akuntansi entitas.<br>
+reklasifikasi portofolio untuk investasi atau diperjualbelikan. melakukan pengecekan apakah reklasifikasi telah sesuai dan efeknya terhadap laba, investasi lainnya, dan mungkin kalo bisa efeknya terhadap laba komprehensif
+</p>
+<br>
+<p>
+piutang dagang<br>
+subledger dengan ledger. hubungkan antara subledger dengan ledger dan lalu investigasi item-item yang tidak wajar, untuk item-item lainnya bisa dicek sesuai dengan testing tresholdnya<br>
+konfirmasi eksistensi. mengkonfirmasi eksistensi bisa dengan mengecek dokumen utama atau dengan dokumen penerimaan kas.<br>
+rollforward. ketika diverifikasi pada tanggal tertentu, dilakukan prosedur rollforward dari tanggal tersebut sampai tanggal neraca. diperhatikan akun-akun signifikan lainnya selama periode tersebut<br>
+dokumen penjualan, penagihan, &amp;amp; <br>
+ada. cek apakah provisinya sudah sesuai dengan kalkulasi yang ada.
+</p>
+<br>
+<p>
+inventories<br>
+observasi. observasi langsung ke tempat untuk memverifikasi apakah jumlah sudah sesuai denganyang ada
+</p>
+<br>
+<p>
+repayment<br>
+verifikasi dokumen yang ada untuk 
+</p>
+<br>
+<p>
+investasi<br>
+inter perusahaan<br>
+non-current<br>
+ppe<br>
+goodwill
+</p>
+<br>
+<p>
+hutang notah<br>
+hutang dagang<br>
+pajak penghasilan, pajak tertangguh, &amp;amp; dan akun2 lain yang berhuungan<br>
+pajak tidak langsung<br>
+provisi, hutang akrual dll, pendapatan tertangguh<br>
+akrual waransi                                                                                  <br>
+hutang jangka panjang, leases, dan akun-akun laporan laba rugi yang berhubungan<br>
+derivatif/hedging/commitment/contingencies<br>
+ekuitas
+</p>
+<br>
+<p>
+workpaper index reference<br>
+income statement accounts<br>
+ua revenue/sales<br>
+ub other income<br>
+uc finance income<br>
+va costs of sales<br>
+vc selling and distribution expense<br>
+vd admin. and ohter expenses<br>
+ve finance expenses<br>
+w journal entry work<br>
+z other accounts
+</p>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Travel <a name='Website:Travel'></a></h1>
+
+			<p>
+Created Sunday 29 October 2023
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			<hr class='pageseparator'/>
+			<h1>Jogja <a name='Website:Travel:Jogja'></a></h1>
+
+			<p>
+Created Wednesday 11 August 2021
+</p>
+<br>
+
+
+			<br>
+			<span class="backlinks">
+			</span>
+
+			
+		</div>
+	</div>
+</body>
+</html>
