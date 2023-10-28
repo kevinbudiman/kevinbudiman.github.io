@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<title>Website</title>
+	<title>General</title>
 	<meta name="generator" content="Zim 0.75.2">
 	<meta name="viewport" content="width=device-width">
 	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
@@ -143,21 +143,91 @@
 <body>
 	<div class="wrapper">
 		<div id="navigation"> <ul>
-<li><b>Website</b>
+<li><a href="../../../Website.html" title="Website" class="page">Website</a>
 <ul>
-<li><a href="./Website_files/Around_the_Web.html" title="Around the Web" class="page">Around the Web</a></li>
-<li><a href="./Website_files/References.html" title="References" class="page">References</a></li>
-<li><a href="./Website_files/Travel.html" title="Travel" class="page">Travel</a></li>
+<li><a href="../../Around_the_Web.html" title="Around the Web" class="page">Around the Web</a></li>
+<li><a href="../../References.html" title="References" class="page">References</a>
+<ul>
+<li><a href="../Art.html" title="Art" class="page">Art</a></li>
+<li><a href="../IT.html" title="IT" class="page">IT</a>
+<ul>
+<li><b>General</b></li>
+</ul></li>
+<li><a href="../Social.html" title="Social" class="page">Social</a></li>
+<li><a href="../Work.html" title="Work" class="page">Work</a></li>
+</ul></li>
+<li><a href="../../Travel.html" title="Travel" class="page">Travel</a></li>
 </ul></li>
 </ul>
  </div>
 		<div id="content">
-			<h1>Website <a name='Website'></a></h1>
+			<h1>General <a name='Website:References:IT:General'></a></h1>
 
 			<p>
-Created Wednesday 11 August 2021
+Created Sunday 29 October 2023
 </p>
 <br>
+<p>
+Download Open Directories Script<br>
+wget -r -e robots=off -np -nc --accept mobi,cbz,cbr,cbc,chm,epub,fb2,lit,lrf,odt,pdf,prc,pdb,pml,rb,rtf,tcr,txt,zip,rar,tar,sit --reject htm,html
+</p>
+<br>
+<p>
+Windows<br>
+Installation<br>
+choco install 7zip anki calibre ccleaner clementine cygwin dropbox emet f.lux freeplane gimp git.install hugin googlechrome inkscape jre8 libreoffice malwarebytes nodejs.install pdfsam powershell r.project scribus smplayer sublimetext3 sumatrapdf.install zim chocolatey emacs sysinternals youtube-dl -y<br>
+npm install -g bower<br>
+bower install jquery picnic
+</p>
+<br>
+<p>
+Other Packages<br>
+foobar2000 sublimetext3.packagecontrol wget tor-browser <br>
+utorrent daemon easeus gmic ice idm line office minitab smadav spss synaptic
+</p>
+<br>
+<p>
+Linux<br>
+Installation<br>
+sudo apt-get remove abiword* apport* apt-xapian-index* gigolo* gmusicbrowser* gnome-mines* gnome-sudoku* gnomine* gnumeric* mousepad* parole* pidgin* ristretto* software-center* thunderbird* xchat* xfburn* xfce4-screenshooter* yelp*<br>
+sudo apt-get install feh git gparted i3 idle3 libav-tools p7zip-full python-gpgme python-pip python3-pip python-tk python3-tk redshift-gtk shutter synaptic ttf-mscorefonts-installer xubuntu-restricted-extras calibre cmus geeqie gimp-gmic hugin keepassx lyx mupdf mupdf-tools playonlinux scribus smplayer ufraw wings3d xchm zim texlive-full libreoffice<br>
+sudo apt-get install jack ardour audacity qtractor hydrogen yoshimi rakarrack guitarix gladish qjackctl puredata supercollider csound chuck blender mypaint openshot darktable<br>
+sudo wget &lt;a href="<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>" title="<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>" class="https"&gt;<a href="https://yt-dl.org/downloads/latest/youtube-dl" title="https://yt-dl.org/downloads/latest/youtube-dl" class="https">https://yt-dl.org/downloads/latest/youtube-dl</a>&lt;/a&gt; -O /usr/local/bin/youtube-dl<br>
+sudo chmod a+rx &lt;a href="<a href="file:///usr/local/bin/youtube-dl" title="file:///usr/local/bin/youtube-dl" class="file">file:///usr/local/bin/youtube-dl</a>" title="/usr/local/bin/youtube-dl" class="file"&gt;/usr/local/bin/youtube-dl&lt;/a&gt;<br>
+sudo apt-get install lib32stdc++6
+</p>
+<br>
+<p>
+Other Packages<br>
+dropbox, chrome, android studio, subl, steam
+</p>
+<br>
+<p>
+Maintenance<br>
+sudo apt-get update &amp;amp;&amp;amp; sudo apt-get -y upgrade &amp;amp;&amp;amp; sudo apt-get -y dist-upgrade<br>
+sudo apt-get autoremove &amp;amp;&amp;amp; sudo apt-get -y autoclean &amp;amp;&amp;amp; sudo apt-get -y clean 
+</p>
+<br>
+<p>
+Performance<br>
+sudo nano /etc/sysctl.conf<br>
+vm.swappiness=1<br>
+vm.vfs_cache_pressure=50<br>
+sudo nano /etc/rc.local<br>
+fstrim /
+</p>
+<br>
+<p>
+Display Troubleshoot<br>
+exec --no-startup-id redshift-gtk -l -7.7956:110.3695<br>
+xrandr --output VGA-1 --brightness 0.5<br>
+xrandr --newmode "1440x900_60.00"  106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync &amp;amp;&amp;amp; xrandr --addmode VGA-1 1440x900_60.00 &amp;amp;&amp;amp; xrandr --output VGA-1 --mode 1440x900_60.00
+</p>
+<br>
+<p>
+Setting Environment Variables<br>
+export PATH=${PATH}:path/to/file
+</p>
 
 
 			<br>
