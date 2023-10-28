@@ -24,7 +24,7 @@ print_hi('Tom')
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-<image src="https://flic.kr/p/2pc2bRN">
+[url=https://flic.kr/p/2pc2bRN][img]https://live.staticflickr.com/65535/53289611304_3e69b4e1a4_k.jpg[/img][/url][url=https://flic.kr/p/2pc2bRN]2023-10-27_05-01-46[/url] by [url=https://www.flickr.com/photos/kevbudiman/]kevinbudiman94[/url], on Flickr
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
